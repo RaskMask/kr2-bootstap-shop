@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Оформление заказа — iStore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-md sticky-top bg-body-tertiary border-bottom">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.png" alt="" width="32" height="32">iStore
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li><li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li><li class="nav-item"><a class="nav-link active" href="order.html" aria-current="page">Заказ</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul>
+      <a class="btn btn-primary" href="order.html">Заказать</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-8">
+      <h1 class="mb-3">Оформление заказа</h1>
+      <div class="alert alert-info" role="alert">Заполните форму — менеджер свяжется с вами и подтвердит заказ.</div>
+      <div class="alert alert-success d-none" id="orderSuccess" role="alert">Заказ отправлен! Мы скоро свяжемся с вами.</div>
+
+      <form class="row g-3" id="orderForm" action="#" method="post" novalidate>
+        <div class="col-12 col-md-6">
+          <label class="form-label" for="userName">Имя и фамилия</label>
+          <input class="form-control" id="userName" name="username" type="text" placeholder="Иван Иванов" required>
+          <div class="invalid-feedback">Укажите имя и фамилию.</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="form-label" for="userEmail">Email</label>
+          <input class="form-control" id="userEmail" name="useremail" type="email" placeholder="example@mail.ru" required>
+          <div class="invalid-feedback">Введите корректный email.</div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="form-label" for="userPhone">Телефон</label>
+          <div class="input-group">
+            <span class="input-group-text">+7</span>
+            <input class="form-control" id="userPhone" name="userphone" type="tel" placeholder="999 999-99-99" required>
+            <div class="invalid-feedback">Укажите телефон.</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <label class="form-label" for="productSelect">Товар</label>
+          <select class="form-select" id="productSelect" name="product" required>
+            <option value="" selected disabled>Выберите товар</option><option value="iPhone 16 Pro — 256 ГБ (Titanium)">iPhone 16 Pro — 256 ГБ (Titanium)</option><option value="iPhone 16 Pro — 512 ГБ (Titanium)">iPhone 16 Pro — 512 ГБ (Titanium)</option><option value="iPhone 16 Pro Max — 256 ГБ (Black)">iPhone 16 Pro Max — 256 ГБ (Black)</option><option value="MacBook Air M3">MacBook Air M3</option><option value="Apple Watch Series 10">Apple Watch Series 10</option>
+          </select>
+          <div class="invalid-feedback">Выберите товар.</div>
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="userComment">Комментарий</label>
+          <textarea class="form-control" id="userComment" name="usercomment" rows="3"
+                    placeholder="Укажите удобное время для звонка менеджера"></textarea>
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="userAgree" name="agree" required>
+            <label class="form-check-label" for="userAgree">Согласен на обработку персональных данных</label>
+            <div class="invalid-feedback">Нужно ваше согласие.</div>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary btn-lg w-100" type="submit">Подтвердить заказ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="border-top mt-auto py-4 text-center text-body-secondary small">
+  <div class="container">© 2026 iStore. Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const form = document.getElementById('orderForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    form.classList.add('was-validated');
+    if (!form.checkValidity()) return;
+    document.getElementById('orderSuccess').classList.remove('d-none');
+    form.reset();
+    form.classList.remove('was-validated');
+  });
+</script>
+</body>
+</html>

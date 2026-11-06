@@ -1,0 +1,36 @@
+:root {
+  --istore-accent: #2997ff;
+  --istore-accent-hover: #43a4ff;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: #232326;
+  --bs-body-bg-rgb: 35, 35, 38;
+  --bs-tertiary-bg-rgb: 28, 28, 30;
+  --bs-border-color: #3a3a3c;
+}
+
+.card { --bs-card-bg: #1c1c1e; }
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--istore-accent);
+  --bs-btn-border-color: var(--istore-accent);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--istore-accent-hover);
+  --bs-btn-hover-border-color: var(--istore-accent-hover);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1a82e6;
+  --bs-btn-active-border-color: #1a82e6;
+}
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+              url("../images/i.webp") center / cover no-repeat;
+}
+
+.product-img { height: 220px; object-fit: contain; }
+.product-hero-img { max-height: 480px; }

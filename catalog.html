@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог — iStore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-md sticky-top bg-body-tertiary border-bottom">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.png" alt="" width="32" height="32">iStore
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link active" href="catalog.html" aria-current="page">Каталог</a></li><li class="nav-item"><a class="nav-link" href="product.html">Товар</a></li><li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul>
+      <a class="btn btn-primary" href="order.html">Заказать</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  <h1 class="mb-3">Каталог техники Apple</h1>
+  <div class="alert alert-info" role="alert">Вся техника оригинальная, с официальной гарантией на один год.</div>
+  <div class="row g-4">
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="card h-100">
+        <span class="badge text-bg-success position-absolute top-0 start-0 m-3">Хит</span>
+        <img src="images/iphone.png" class="card-img-top product-img p-4" alt="iPhone 16 Pro">
+        <div class="card-body d-flex flex-column">
+          <h2 class="card-title h5">iPhone 16 Pro</h2>
+          <p class="card-text text-body-secondary flex-grow-1">Смартфон на чипе A18 Pro с титановым корпусом и кнопкой Camera Control.</p>
+          <p class="fs-5 fw-semibold mb-3">124 990 ₽</p>
+          <div class="d-flex gap-2"><a class="btn btn-primary flex-grow-1" href="product.html">Подробнее</a><button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#quickOrder" data-product="iPhone 16 Pro">Быстрый заказ</button></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="card h-100">
+        
+        <img src="images/macbook.png" class="card-img-top product-img p-4" alt="MacBook Air M3">
+        <div class="card-body d-flex flex-column">
+          <h2 class="card-title h5">MacBook Air M3</h2>
+          <p class="card-text text-body-secondary flex-grow-1">Лёгкий ноутбук на чипе Apple M3 для учёбы и работы.</p>
+          <p class="fs-5 fw-semibold mb-3">139 990 ₽</p>
+          <div class="d-flex gap-2"><a class="btn btn-primary flex-grow-1" href="product.html">Подробнее</a><button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#quickOrder" data-product="MacBook Air M3">Быстрый заказ</button></div>
+        </div>
+      </article>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <article class="card h-100">
+        <span class="badge text-bg-danger position-absolute top-0 start-0 m-3">Скидка</span>
+        <img src="images/watch.png" class="card-img-top product-img p-4" alt="Apple Watch Series 10">
+        <div class="card-body d-flex flex-column">
+          <h2 class="card-title h5">Apple Watch Series 10</h2>
+          <p class="card-text text-body-secondary flex-grow-1">Умные часы для спорта, уведомлений и контроля здоровья.</p>
+          <p class="fs-5 fw-semibold mb-3">44 990 ₽</p>
+          <div class="d-flex gap-2"><a class="btn btn-primary flex-grow-1" href="product.html">Подробнее</a><button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#quickOrder" data-product="Apple Watch Series 10">Быстрый заказ</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+
+<div class="modal fade" id="quickOrder" tabindex="-1" aria-labelledby="quickOrderTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <form class="modal-content" action="#" method="post">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="quickOrderTitle">Быстрый заказ: <span id="quickProduct">товар</span></h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label class="form-label" for="qName">Имя</label>
+          <input class="form-control" id="qName" name="username" type="text" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="qPhone">Телефон</label>
+          <div class="input-group">
+            <span class="input-group-text">+7</span>
+            <input class="form-control" id="qPhone" name="userphone" type="tel" placeholder="999 999-99-99" required>
+          </div>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="qAgree" name="agree" required>
+          <label class="form-check-label" for="qAgree">Согласен на обработку персональных данных</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Закрыть</button>
+        <button type="submit" class="btn btn-primary">Отправить заявку</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer class="border-top mt-auto py-4 text-center text-body-secondary small">
+  <div class="container">© 2026 iStore. Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('quickOrder').addEventListener('show.bs.modal', function (e) {
+    document.getElementById('quickProduct').textContent = e.relatedTarget.dataset.product;
+  });
+</script>
+</body>
+</html>

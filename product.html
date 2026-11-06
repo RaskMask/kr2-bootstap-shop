@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apple iPhone 16 Pro — iStore</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<nav class="navbar navbar-expand-md sticky-top bg-body-tertiary border-bottom">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.png" alt="" width="32" height="32">iStore
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Открыть меню">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Каталог</a></li><li class="nav-item"><a class="nav-link active" href="product.html" aria-current="page">Товар</a></li><li class="nav-item"><a class="nav-link" href="order.html">Заказ</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul>
+      <a class="btn btn-primary" href="order.html">Заказать</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+  <div class="row g-5 align-items-center">
+    <div class="col-12 col-lg-6 text-center">
+      <img src="images/iphone.png" class="img-fluid product-hero-img" alt="Apple iPhone 16 Pro">
+    </div>
+    <div class="col-12 col-lg-6">
+      <span class="badge text-bg-success mb-2">Хит</span>
+      <h1>Apple iPhone 16 Pro</h1>
+      <p class="fs-3 fw-semibold">124 990 ₽</p>
+      <p class="text-body-secondary">Смартфон со сверхмощным процессором A18 Pro, кнопкой управления камерой Camera Control и титановым корпусом.</p>
+      <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-primary btn-lg" href="order.html">Оформить заказ</a>
+        <a class="btn btn-outline-light btn-lg" href="catalog.html">Назад в каталог</a>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs mt-5" id="productTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="specs-tab" data-bs-toggle="tab" data-bs-target="#specs" type="button"
+              role="tab" aria-controls="specs" aria-selected="true">Характеристики</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="delivery-tab" data-bs-toggle="tab" data-bs-target="#delivery" type="button"
+              role="tab" aria-controls="delivery" aria-selected="false">Доставка и гарантия</button>
+    </li>
+  </ul>
+  <div class="tab-content pt-4">
+    <div class="tab-pane fade show active" id="specs" role="tabpanel" aria-labelledby="specs-tab" tabindex="0">
+      <div class="table-responsive"><table class="table table-striped align-middle"><tbody><tr><th scope="row" class="w-50">Процессор</th><td>Apple A18 Pro</td></tr><tr><th scope="row" class="w-50">Объём памяти</th><td>256 ГБ / 512 ГБ / 1 ТБ</td></tr><tr><th scope="row" class="w-50">Материал корпуса</th><td>Титан, стекло</td></tr><tr><th scope="row" class="w-50">Операционная система</th><td>iOS 18</td></tr></tbody></table></div>
+    </div>
+    <div class="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab" tabindex="0">
+      <ul>
+        <li>Экспресс-доставка до вашей двери в день заказа.</li>
+        <li>Заказ можно забрать самостоятельно в магазине.</li>
+        <li>Один год официального обслуживания.</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<footer class="border-top mt-auto py-4 text-center text-body-secondary small">
+  <div class="container">© 2026 iStore. Все права защищены.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
